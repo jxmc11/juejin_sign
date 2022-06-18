@@ -209,7 +209,7 @@ let total = 0
     if (juejinCookie.length) {
         timeCount()
     }
-juejinCookie.sort((a,b) => Math.random() > 0.5)
+juejinCookie = juejinCookie.sort((a,b) => Math.random() > 0.5)
     for (let i = startIndex; i < juejinCookie.length; i++) {
         // if (count >= 5) {
         //     process.exit(0)
@@ -265,7 +265,7 @@ juejinCookie.sort((a,b) => Math.random() > 0.5)
           "referrer": "https://juejin.cn/",
           "referrerPolicy": "strict-origin-when-cross-origin",
           "body": JSON.stringify({
-          "user_id": "2242659452477016",
+          "user_id": "3615671881575853",
           "sort_type": 2,
           "cursor": cursor
         }),
@@ -282,7 +282,7 @@ juejinCookie.sort((a,b) => Math.random() > 0.5)
             }
             }
                     postid = Array.from(new Set(postid))
-        postid.sort((a,b) => Math.random() > 0.5)
+        postid = postid.sort((a,b) => Math.random() > 0.5)
                 console.log(postid)
                 for (let v of postid) {
                         await fuck_jue.zanArticle(v)
