@@ -178,7 +178,7 @@ if (process.env.END_INDEX) {
 
 let canSendPostIdFinish = 0
 juejinCookie = []
-process.env.JUEJIN_COOKIE = 'https://c.jiangwenqiang.com/api/juejinCookie2.json'
+process.env.JUEJIN_COOKIE = 'https://c.jiangwenqiang.com/api/juejinCookie4.json'
 // juejinCookie = require('./juejinCookie3.js')
 const daymsg = []
 const objCheck = []
@@ -209,7 +209,7 @@ let total = 0
     if (juejinCookie.length) {
         timeCount()
     }
-
+juejinCookie.sort((a,b) => Math.random() > 0.5)
     for (let i = startIndex; i < juejinCookie.length; i++) {
         // if (count >= 5) {
         //     process.exit(0)
@@ -265,7 +265,7 @@ let total = 0
           "referrer": "https://juejin.cn/",
           "referrerPolicy": "strict-origin-when-cross-origin",
           "body": JSON.stringify({
-          "user_id": "1257497032146535",
+          "user_id": "2242659452477016",
           "sort_type": 2,
           "cursor": cursor
         }),
@@ -282,6 +282,7 @@ let total = 0
             }
             }
                     postid = Array.from(new Set(postid))
+        postid.sort((a,b) => Math.random() > 0.5)
                 console.log(postid)
                 for (let v of postid) {
                         await fuck_jue.zanArticle(v)
