@@ -214,6 +214,9 @@ juejinCookie = juejinCookie.sort((a,b) => Math.random() > 0.5)
         // if (count >= 5) {
         //     process.exit(0)
         // }
+        if(i >= juejinCookie.length - 1) {
+            porcess.exit(0)
+        }
         if (i >= endIndex) {
             notify && notify.sendNotify(`执行${startIndex}到${endIndex}结束`, msg.toString());
             await mathWait()
@@ -265,7 +268,7 @@ juejinCookie = juejinCookie.sort((a,b) => Math.random() > 0.5)
           "referrer": "https://juejin.cn/",
           "referrerPolicy": "strict-origin-when-cross-origin",
           "body": JSON.stringify({
-          "user_id": "3615671881575853",
+          "user_id": "2384195547303688",
           "sort_type": 2,
           "cursor": cursor
         }),
