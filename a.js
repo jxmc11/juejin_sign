@@ -288,7 +288,9 @@ juejinCookie = juejinCookie.sort((a,b) => (Math.random() - 0.5))
         postid = postid.sort((a,b) => (Math.random() - 0.5))
                 console.log(postid)
                 for (let v of postid) {
-                        await fuck_jue.zanArticle(v)
+                    await fuck_jue.openIndexPage()
+                    await mathWait()
+                    await fuck_jue.randomOpenArticleAndZan(v)
                         await $.wait(1000)
                 }
         continue
@@ -2106,55 +2108,12 @@ class JueJin {
             "credentials": "include"
             });
     }
-    async randomOpenArticleAndZan () {
+    async randomOpenArticleAndZan (v) {
         const article = await this.recommend_all_feed()
         let item_type = 0
-        let postId = 0
-        let sss = [
-    "7110033715559923720",
-    "7109642671970336776",
-    "7109300115680002085",
-    "7108900890701987847",
-    "7108528885733523487",
-    "7108148294995410958",
-    "7107787730263736327",
-    "7107414966335963166",
-    "7107047772364374030",
-    "7106759732026671118",
-    "7106381938759303182",
-    "7106314751277268999",
-    "7106036832231489567",
-    "7105577362653184013",
-    "7104446814098554916",
-    "7104170359091363853",
-    "7103782170598047758",
-    "7103406153610035207",
-    "7103047160161107999",
-    "7102599560874164255",
-    "7102338292867137544",
-    "7102298447365177358",
-    "7100166078277517326",
-    "7089698682907394079",
-    "7087116208847192100",
-    "6844903652184850440"
-]
-        // while (+item_type !== 2 && !postId) {
-        //     let item = article[Math.floor(Math.random() * article.length)]
-        //     postId = item.item_info.article_id
-        //     item_type = item.item_type
-        // }
-        // sss.map(async (i) => {
-        //     console.log(i)
-            
-        // })
-        for(let i=0; i<sss.length-1;i++) {
-            console.log(sss[i], 'shua')
-            await this.openArticle(sss[i])    
-            await mathWait()
-        }
-        // for(let v of sss) {
-            
-        // }
+        let postId = v
+        
+       await this.openArticle(v) 
         await mathWait()
         
     }
