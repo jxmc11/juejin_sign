@@ -3,6 +3,8 @@ name: 掘金签到
 on:
   push:
     branches: [ master ]
+  schedule:
+    - cron: 12 */4 * * *
   watch:
     types: started
 
