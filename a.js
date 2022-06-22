@@ -268,7 +268,7 @@ juejinCookie = juejinCookie.sort((a,b) => (Math.random() - 0.5))
           "referrer": "https://juejin.cn/",
           "referrerPolicy": "strict-origin-when-cross-origin",
           "body": JSON.stringify({
-          "user_id": "1953169700556455",
+          "user_id": "588993960902046",
           "sort_type": 2,
           "cursor": cursor
         }),
